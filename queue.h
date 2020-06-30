@@ -1,6 +1,6 @@
 #ifndef QUEUE_H_INCLUDED
 #define QUEUE_H_INCLUDED
-#include "structs-node.h"
+#include "node.h"
 
 typedef struct Queue {
     node *front, *back;

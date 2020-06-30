@@ -2,38 +2,35 @@
 #include <stdlib.h>//Standard library
 #include "stack.h" //Header
 
-/*stack_init
-Initilize the stack with the default values
--------------------------------------------
-
-s: stack to be initilize
-*/
+/** function stack_init
+ * Initilize the stack with the default values
+ * 
+ * @param s: stack to be initilize
+ **/
 void stack_init(stack* s){
     s->top = NULL;
 }
 
-/** stack_push
+/** function stack_push
  * Push a value into the stack
- * ---------------------------
  * 
- * s: stack sructure
- * data: data to be pushed
+ * @param s: stack sructure
+ * @param data: data to be pushed
  */
 void stack_push(stack* s, void* data){
     node* newNode = node_create(data);
-    if (s->top != NULL){ //I case the top ain't null
-        newNode->next = s->top;
+    if (s->top != NULL){        //In case the top ain't null
+        newNode->next = s->top; //the new node is first, the top next
     } 
     s->top = newNode; //The new nodes always takes de top place
 }
 
-/** stack_pop 
+/** function stack_pop 
  * Returns the top and removes it from the stack
- * ---------------------------------------------
  * 
- * s: stack structure
+ * @param s: stack structure
  * 
- * Returns the top value
+ * @returns the top value
  */
 void* stack_pop(stack* s){
     node* prevTop = s->top;
@@ -43,20 +40,21 @@ void* stack_pop(stack* s){
     return data;
 }
 
-/** stack_peak
+/** function stack_peak
  * Returns the top without removing it from the stack
- * ---------------------------------------------
  * 
- * s: stack structure
+ * @param s: stack structure
  * 
- * Returns the top value
+ * @return the top value
  */
 void* stack_peak(stack* s){
     return s->top->data;
 }
 
-/** stack_isEmpty
- *  Just to know if the given stack is empty
+/** function stack_isEmpty
+ * Just to know if the given stack is empty
+ *  
+ * @param s: stack structure
  */
 int stack_isEmpty(stack* s){
     return s->top == NULL;

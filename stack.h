@@ -1,6 +1,6 @@
 #ifndef STACK
 #define STACK
-#include "structs-node.c"
+#include "node.h"
 
 typedef struct Stack {
     node *top;
