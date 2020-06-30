@@ -10,3 +10,11 @@ I'm a student from the ITCR. I thought that this might be a good idea knowing ho
 * Stack
 
 # Work under progress
+Currently developing v0.2 (30/6/20)
+  ## Updating
+    - Simple list to List
+  ## Hoping to add
+    - Json: only struct, not parsing .json files nor creating them
+    
+# Versioning
+  - 0.1 half way project, just a hobby left by
